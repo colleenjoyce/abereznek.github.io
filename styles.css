@@ -1,0 +1,68 @@
+/* snow-grey: #F5EFED;
+honey-dew: #D9E5D6;
+medium-champagne: #EDDEA4;
+atomic-tangerine: #F7A072;
+deep-saffron: #FF9B42;
+plum: #5e4e79;
+
+gradients:
+pink gradient
+#dd5e89
+→
+#f7bb97
+
+seaweed
+#4cb8c4
+→
+#3cd3ad
+
+purple:
+1d2b64
+→
+#f8cdda
+
+rose to blue
+#e55d87
+→
+#5fc3e4
+
+copper:
+#b79891
+→
+#94716b
+
+*/
+
+.lh-copy {
+  text-underline-offset: 0.25em !important;
+}
+
+.slug-line {
+  margin-top: 0!important;
+  letter-spacing: 0.05rem;
+}
+
+.tangerine {
+  color: #F7A072 !important;
+}
+
+.linear-slide {
+  text-align: left;
+
+  background: linear-gradient(to left, #D9E5D6 20%, #FF9B42 40%, #FF9B42 60%, #D9E5D6 80%);
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+  animation: shine 6s linear infinite;
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
