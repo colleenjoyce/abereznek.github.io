@@ -9,27 +9,53 @@
     <script type="application/javascript" src="../js/email.js"></script>
     <style>
       .link, .link:active, .link:focus, .link:hover, .link:link, .link:visited {
-        transition: none;
+        transition: none;}
+
+      .threed {
+        /* perspective: 900px; */
+        transform:
+          perspective(1000px)
+          rotateX(4deg)
+          rotateY(-16deg)
+          rotateZ(4deg);
+        box-shadow: 24px 16px 64px 0 rgba(0, 0, 0, 0.10);
+        border-radius: 2px;
       }
+
+      .floating:hover {
+      	animation-name: floating;
+      	animation-duration: 5s;
+      	animation-iteration-count: infinite;
+      	animation-timing-function: ease-in-out;
+      	/* margin-left: 30px;
+      	margin-top: 5px; */
+      }
+
+      @keyframes floating {
+      	0% { transform: translate(0px, 0px); }
+      	50% { transform: translate(15px, 0px); }
+      	100% { transform: translate(0px, -0px); }
+      }
+
     </style>
   </head>
 
-  <body class="sans-serif">
+  <body class="sans-serif bg-near-white">
     <section class="mw8 center avenir">
 
       <nav>
-        <a href="../" class="link black b hover-bg-black hover-white f6 ttu mr3 pa3 fixed top-1 left-1">Home</a>
-        <a class="link black b hover-bg-black hover-white f6 ttu mr3 pa3 fixed top-1 right-1" href="../work/" title="work">Work</a>
-        <a class="link black b hover-bg-black hover-white f6 ttu mr3 pa3 fixed bottom-1 left-1" href="../" title="about">About</a>
-        <a class="link black b hover-bg-black hover-white f6 ttu mr3 pa3 fixed bottom-1 right-1" title="contact">Contact</a>
+        <a href="./index.html" class="link black b hover-bg-black hover-white f6 ttu mr3 pa3 fixed top-1 left-1">Home</a>
+        <a class="link black b hover-bg-black hover-white f6 ttu mr3 pa3 fixed top-1 right-1" href="../work/index.html" title="work">Work</a>
+        <a class="link black b hover-bg-black hover-white f6 ttu mr3 pa3 fixed bottom-1 left-1" href="../about/index.html" title="about">About</a>
+        <a class="link black b hover-bg-black hover-white f6 ttu mr3 pa3 fixed bottom-1 right-1" href="../contact/index.html" title="contact">Contact</a>
       </nav>
 
-      <article class="vh-100 dt w-100 db pv5-ns pv4 ph3 ph0-l no-underline black">
-        <div class="flex flex-column flex-row-ns">
+      <article class="vh-100 dt w-100">
+      <!-- <article class="vh-100 dt w-100 db pv5-ns pv4 ph3 ph0-l no-underline black"> -->
 
           <!-- <div class="pr3-ns mb4 mb0-ns w-100 w-50-ns order-2 order-1-ns"> -->
-          <div class="dtc v-mid ph4-l tracked">
-            <img src="../ab.jpeg" class="db-ns dn mt3 mt0-ns" alt="hi i'm alyssa">
+          <div class="dtc v-mid tc ph4-l tracked">
+            <img src="../ab.jpeg" class=" db-ns dn mt3 mt0-ns" alt="hi i'm alyssa">
           </div>
 
           <!-- <div class="w-100 w-50-ns pl3-ns order-1 order-2-ns">
@@ -47,7 +73,6 @@
               <p class="f3 lh-copy baskerville">Hi! I’m Alyssa, a journalist and podcaster with more than 10 years of experience. I write about media, celebrity, technology, and how the internet is changing our lives. My reporting has taken me everywhere from Apple product launches to the 2016 primaries to Southern California succulent farms. I’m based in Los Angeles as a staffer at <i>The Ringer</i>, where I reported, wrote, and hosted <i>Boom/Bust: HQ Trivia</i>, a 2020 audio documentary about the rise and fall of a viral trivia app. At the moment I’m working on a new show, slated to come out this year.
               </p>
             </section>
-          </div>
         </div>
       </article>
     </section>

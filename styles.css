@@ -9,7 +9,7 @@ gradients:
 pink gradient
 #dd5e89
 →
-#f7bb97
+#dd5e89
 
 seaweed
 #4cb8c4
@@ -33,9 +33,25 @@ copper:
 
 */
 
+
+.main-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width:
+}
+
+
+@font-face {
+  font-family: "Neue Machina";
+  src: url('fonts/PPNeueMachina-Ultrabold.otf');
+}
+
 .lh-copy {
   text-underline-offset: 0.25em !important;
 }
+
 
 .slug-line {
   margin-top: 0!important;

@@ -1,0 +1,38 @@
+.lineUp {
+  animation: 4s anim-lineUp ease-out;
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.slideIn {
+  /* animation: .5s anim-slideIn ease-in; */
+  animation: 3s slide-right -2s forwards;
+  transform:translateX(-100%);
+}
+
+@keyframes slide-right {
+  to {
+    transform:translateX(0);
+  }
+}
+
+color: linear-gradient(-60deg, #dd5e89, #f7bb97, #1d2b64, #f8cdda);
+-webkit-text-fill-color: white; /* Will override color (regardless of order) */
+-webkit-text-stroke-width: 1px; */
+-webkit-text-stroke-color: linear-gradient(-60deg, #dd5e89, #f7bb97, #1d2b64, #f8cdda);;

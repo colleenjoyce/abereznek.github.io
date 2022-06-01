@@ -4,44 +4,181 @@
     <meta charset='utf-8'>
     <title>alyssa bereznak &mdash; journalist living in brooklyn (with a cat)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
     <script type="application/javascript" src="../js/email.js"></script>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Neuton:ital@1&family=Rubik+Mono+One&display=swap');
+   </style>
+    <style>
+
+        @keyframes gradient {
+        	0% {
+        		background-position: 0% 50%;
+        	}
+        	50% {
+        		background-position: 100% 50%;
+        	}
+        	100% {
+        		background-position: 0% 50%;
+        	}
+        }
+
       .link, .link:active, .link:focus, .link:hover, .link:link, .link:visited {
         transition: none;
       }
-      .gradient {
-        animation: flow 30s ease-in-out infinite;
-        background: linear-gradient(-60deg, #b79891, #94716b, #fff);
+
+      .headline-outline {
+        font-family: 'Rubik Mono One', sans-serif;
+        margin-bottom: 0;
+        font-size: 8.5rem;
+        text-align: left;
+        color: #DFD8D6;
+
+        line-height: .80;
       }
 
-      h1 {
-        animation: flow 30s ease-in-out infinite;
-        color: linear-gradient(-60deg, #dd5e89, #f7bb97, #1d2b64, #f8cdda);
-        -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: linear-gradient(-60deg, #dd5e89, #f7bb97, #1d2b64, #f8cdda);;
+      .headline {
+        color: #94908E;
+        font-family: 'Gentium Book Basic', serif;
+        letter-spacing: .025em;
+        text-transform: uppercase;
+        font-size: 3.25rem;
+        margin-top: 0;
       }
+
+      .margin-top {
+        margin-top: 40vh;
+      }
+
+      body {
+        background: #F8F0ED;
+      }
+
+
+      body::before,
+      body::after {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        -webkit-mask:radial-gradient(at 75%, red , transparent 70%);
+        mix-blend-mode: color;
+        content: '';
+
+        -webkit-animation: linear infinite;
+        -webkit-animation-name: run;
+        -webkit-animation-duration: 12s;
+      }
+
+      body::before {
+        background: #000;
+        filter: url("#f");
+      }
+
+      body::after {
+        background: linear-gradient(#e55d87, #5fc3e4);
+      }
+
+      @-webkit-keyframes run {
+        0% {
+          top: 0;
+          bottom: 0;
+        }
+        48% {
+          -webkit-transform: rotateY(0deg);
+        }
+        50% {
+          left: 50%;
+          -webkit-transform: rotateY(180deg);
+        }
+        98% {
+          -webkit-transform: rotateY(180deg);
+        }
+        100% {
+          left: 0;
+          bottom: 100;
+           -webkit-transform: rotateY(0deg);
+        }
+      }
+
+      header {
+        width: 100%;
+        height: 5%;
+        border-bottom: solid 2px white;
+      }
+
+      nav a {
+        color: #94908E;
+        font-family: 'Rubik Mono One', sans-serif;
+        letter-spacing: 1px;
+      }
+
+      footer {
+        width: 100%;
+        height: 40px;
+        border-top: solid 2px white;
+
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+
+      }
+
+      footer a {
+        color: #94908E;
+      }
+
+
     </style>
   </head>
-  <body class="sans-serif">
-    <section class="center avenir">
+  <body class="body sans-serif">
+    <svg>
+      <filter id="f">
+        <feTurbulence type="fractalNoise" baseFrequency="7.5"/>
+      </filter>
+    </svg>
 
-      <nav>
-        <a href="../" class="link black b hover-bg-black hover-white f6 ttu mr3 pa3 fixed top-1 left-1">Home</a>
-        <a class="link black b hover-bg-black hover-white f6 ttu mr3 pa3 fixed top-1 right-1" href="../work/" title="work">Work</a>
-        <a class="link black b hover-bg-black hover-white f6 ttu mr3 pa3 fixed bottom-1 left-1" href="../" title="about">About</a>
-        <a class="link black b hover-bg-black hover-white f6 ttu mr3 pa3 fixed bottom-1 right-1" href="./contact/index.html" title="contact">Contact</a>
-      </nav>
+    <section class="fl w-100 pa2">
 
-      <div class="mw7 mt7">
+      <header class="avenir fixed top-1">
+        <nav class="fixed top-1 right-1">
+          <a class="link tr ttu f5 ttu mr3 pa3 dim" href="./about/index.html">About</a>
+          <a class="link tr ttu f5 ttu mr3 pa3 dim" href="./work//index2.html">Work</a>
+          <a class="link tr ttu f5 ttu mr3 pa3 dim" href="./contact//index.html">Contact</a>
 
-        <section title="landing center" class="">
-          <h1 class="f-headline lh-title mb0">ALYSSA<br>BEREZNAK</h1>
-          <!-- <p class="mb0 db f2 b lh-copy slug-line">journalist and podcaster</p> -->
-        </section>
+        </nav>
+        <!-- <nav class="">
+          <a href="../" class="link b hover-bg-black hover-white f6 ttu mr3 pa3 fixed top-1 left-1">Home</a>
+          <a class="link b hover-bg-black hover-white f6 ttu mr3 pa3 fixed top-1 right-1" href="../work/" title="work">Info</a>
+          <a class="link b hover-bg-black hover-white f6 ttu mr3 pa3 fixed bottom-1 left-1" href="../about" title="about">Writing</a>
+          <a class="link b hover-bg-black hover-white f6 ttu mr3 pa3 fixed bottom-1 right-1" href="../contact/" title="contact">Podcast</a>
+        </nav> -->
+      </header>
+
+
+
+      <div class="main-section  tc">
+
+          <h1 class="avenir headline-outline f-headline lineUp ttu">Alyssa Bereznak</h1>
+
+          <p class="headline f-headline lh-title  slideIn">Journalist <i>&#38;</i> podcaster</p>
 
       </div>
+
+      <footer class="ph4 ph5-ns fixed bottom-1">
+        <a class="link dim dib h2 w2 br-100 mr4" href="https://instagram.com/mrmrs_" title="Instagram">
+          <svg class="dib h2 w2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42c-.526.204-.973.478-1.417.923-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372.526-.204.973-.478 1.417-.923.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942-.204-.526-.478-.973-.923-1.417-.444-.445-.89-.72-1.417-.923-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.048 3.233c-.036.78-.166 1.203-.276 1.485-.145.374-.318.64-.598.92-.28.28-.546.453-.92.598-.282.11-.705.24-1.485.276-.844.038-1.097.047-3.233.047s-2.39-.01-3.233-.048c-.78-.036-1.203-.166-1.485-.276-.374-.145-.64-.318-.92-.598-.28-.28-.453-.546-.598-.92-.11-.282-.24-.705-.276-1.485C1.45 10.39 1.44 10.136 1.44 8s.01-2.39.048-3.233c.036-.78.166-1.203.276-1.485.145-.374.318-.64.598-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276C5.61 1.45 5.864 1.44 8 1.44zm0 2.452c-2.27 0-4.108 1.84-4.108 4.108 0 2.27 1.84 4.108 4.108 4.108 2.27 0 4.108-1.84 4.108-4.108 0-2.27-1.84-4.108-4.108-4.108zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm5.23-6.937c0 .53-.43.96-.96.96s-.96-.43-.96-.96.43-.96.96-.96.96.43.96.96z"/></svg>
+        </a>
+
+        <a class="link dim dib h2 w2 br-100 mr3 " href="#" title="">
+          <svg data-icon="twitter" viewBox="0 0 32 32" style="fill:currentcolor">
+            <title>twitter icon</title>
+            <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"></path>
+          </svg>
+        </a>
+      </footer>
 
     </section>
   </body>
